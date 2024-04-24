@@ -1,0 +1,55 @@
+/*mobile first min-width sets base and content is adapted to computers.*/
+@media (min-width: 100px) {
+    /*User profile card*/
+    .user-card-skeleton-loader {
+        height: 145px;
+        width: 100%; /*Width for non-mobile set below*/
+        padding: 25px;
+        border-radius: 30px;
+        /*Change card to look good for preloading*/
+        background: var(--background-accent-1-color)
+    }
+
+    /*Name*/
+    .user-card-name-skeleton-loader {
+        width: min(80%, 210px);
+        /*margin: auto;*/
+        margin-top: 6px;
+        height: 33px;
+    }
+
+    .user-card-email-container {
+        display: grid;
+        grid-template-columns: 25px min(70%, 200px);
+        grid-template-rows: auto;
+        gap: 13px;
+        height: 25px;
+        /*justify-content: space-between;*/
+        /*justify-items: end;*/
+        margin: 25px 0 20px 0;
+    }
+
+    .user-card-dropdown-container {
+        display: grid;
+        grid-template-columns: repeat(2, min(45%, 140px)); /*Equals: min(45%, 140px) min(45%, 140px)*/
+        grid-template-rows: auto;
+        justify-content: space-evenly;
+        /*justify-items: end;*/
+        height: 30px;
+        gap: 10%;
+    }
+    /*Add border radius to immediate div children*/
+    .user-card-dropdown-container > div {
+        border-radius: 99px;
+    }
+}
+
+@media (min-width: 641px) {
+    .user-card-dropdown-container {
+        justify-content: space-between;
+    }
+    .user-card-skeleton-loader {
+        width: 314px;
+    }
+}
+

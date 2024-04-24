@@ -1,0 +1,163 @@
+/*General style of page components with a custom selector (class / id)*/
+
+/*Divs*/
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*Example use-case: center title and plus button next to it*/
+.vertical-center {
+    display: flex;
+    align-items: center;
+    /*Add the margin to the group because it has been removed on the h1. Approximately same as normal h1 bottom margin*/
+    margin-bottom: 25px;
+}
+/*Remove bottom margin when header is in vertical-center div to align all elements in the middle*/
+.vertical-center h1 {
+    margin-bottom: 0;
+}
+
+/*Button*/
+.btn {
+    background: var(--btn-color);
+    color: black;
+    padding: 13px 25px;
+    border: none;
+    margin: 15px 0 0;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 2px 3px 11px rgba(0, 0, 0, 0.2);
+    text-decoration: none; /*For when <a> is used as button*/
+    display: inline-block; /*For when <a> is used as button and when icon is used*/
+    letter-spacing: 0.5px; /*Increase spacing between letters a bit*/
+    transition: filter 250ms;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-weight: normal !important; /*For when <a> to behave as button*/
+    filter: brightness(90%);
+    text-decoration: none; /*For when <a> is used as button*/
+}
+
+.btn:focus {
+    outline: 1px solid var(--primary-color);
+}
+
+.btn:disabled {
+    background: var(--background-accent-2-color);
+    color: grey;
+    cursor: default;
+}
+
+.btn-red {
+    background-color: var(--btn-red-color);
+}
+
+.btn-red:hover {
+    filter: brightness(95%) saturate(130%);
+}
+
+.btn-red:focus {
+    filter: brightness(90%) saturate(140%);
+}
+
+.btn-orange {
+    background-color: var(--btn-orange-color);
+}
+
+.btn-orange:hover {
+    filter: brightness(95%) saturate(130%);
+}
+
+.btn-orange:focus {
+    filter: brightness(90%) saturate(140%);
+}
+
+
+.icon-in-btn {
+    width: 18px;
+    float: left;
+    margin-right: 0.5em;
+}
+
+/*Less prominent and noticeable text*/
+.subdued-text {
+    text-decoration: none;
+    color: var(--subdued-text-color);
+    margin-top: 10px;
+}
+
+.subdued-text:hover {
+    color: var(--primary-text-color);
+    /*font-weight: 500;*/
+    text-decoration: none !important;
+}
+
+.small-text {
+    font-size: 14px;
+    display: inline-block;
+}
+
+.error-panel {
+    display: block;
+    padding: 12px 20px;
+    border-radius: 15px;
+    background: rgb(255, 189, 177);
+    border-bottom: 3px solid #b25353;
+}
+
+.default-select {
+    border-radius: 99px;
+    padding: 5px;
+    border: 1.5px solid var(--primary-color);
+    background: var(--background-accent-1-color);
+}
+
+.default-select:disabled {
+    filter: grayscale(0.7) brightness(95%);
+    color: var(--black-white-text-color);
+}
+
+.bigger-select {
+    border: 3px solid var(--primary-color);
+    padding: 7px;
+    background: var(--background-accent-1-color);
+    color: var(--primary-text-color);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.bigger-select-label {
+    display: block;
+    font-weight: bold;
+    color: var(--subdued-text-color);
+    font-size: 13px;
+    margin: 0 0 5px 7px;
+}
+
+.icon {
+    filter: var(--primary-color-filter);
+}
+
+.icon-on-dark-background {
+    filter: var(--icon-filter-dark-background);
+}
+
+.default-icon-container div img, .default-icon-size {
+    height: 20px;
+}
+
+.big-icon {
+    height: 50px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+@media (min-width: 961px) {
+}

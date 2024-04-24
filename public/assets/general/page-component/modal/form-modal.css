@@ -1,0 +1,150 @@
+/*mobile first min-width sets base and content is adapted to computers.*/
+@media (min-width: 100px) {
+    /*The Modal (background)*/
+    #modal {
+        position: fixed; /*Stay in place*/
+        z-index: 100; /*Sit on top of content placeholder but below .flash*/
+        padding: 20px 0; /*Location of the box*/
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%; /*Full height*/
+        overflow: auto; /*Enable scroll if needed*/
+        background-color: rgb(100, 100, 100); /*Fallback color*/
+        background-color: rgba(0, 0, 0, 0.4); /*Black w/ opacity*/
+        backdrop-filter: blur(5px);
+    }
+
+    /*Modal Content*/
+    #modal-box {
+        position: relative;
+        background-color: var(--modal-box-background);
+        margin: auto;
+        padding: 2px 18px 30px 18px;
+        border-radius: 33px;
+        width: 95%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border: 1px solid var(--border-accent-2-color);
+        animation-name: fade-in-modal;
+        animation-duration: 0.4s;
+        max-width: 900px;
+    }
+
+    /*The Close Button*/
+    #close-modal {
+        color: #aaaaaa;
+        float: right;
+        font-size: 32px;
+        font-weight: normal;
+        margin-top: 10px;
+        margin-right: 5px;
+    }
+
+    #close-modal:hover,
+    #close-modal:focus {
+        color: #868686;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /*Modal Header*/
+    #modal-header {
+        padding: 2px 0;
+    }
+
+    /*Modal Body*/
+    #modal-body {
+        padding: 2px 0;
+    }
+
+    /*Modal Footer*/
+    #modal-footer {
+        padding-top: 10px;
+    }
+
+    /*Wide form input group with label and input being max half wide and wrapping*/
+    .wide-modal-form {
+        display: grid;
+        gap: 0px 40px;
+        /*Source for this awesome grid-template-columns setting: https://stackoverflow.com/a/69154193/9013718*/
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, max(300px, 100% / 3 - 45px)), 1fr));
+    }
+}
+
+@media (min-width: 641px) {
+    #modal {
+        padding-top: 50px; /*Location of the box*/
+    }
+
+    /*portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones*/
+    #alert-modal-box {
+        padding: 40px;
+    }
+
+    #alert-modal-footer .btn {
+        font-size: 1.2em;
+    }
+
+    #modal-box {
+        width: 80%;
+        padding: 2px 30px 30px 30px;
+    }
+    #modal-box.wide-modal {
+        width: 95%;
+    }
+}
+
+@media (min-width: 700px) {
+    #modal-box:not(.wide-modal) {
+        width: 60%;
+    }
+}
+
+@media (min-width: 900px) {
+    #modal-box.wide-modal {
+        /*min-width: 500px;*/
+        width: 80%;
+    }
+}
+
+@media (min-width: 961px) {
+    /*tablet, landscape iPad, lo-res laptops ands desktops*/
+    #modal-box:not(.wide-modal) {
+        width: 50%;
+    }
+}
+@media (min-width: 1200px) {
+    /*tablet, landscape iPad, lo-res laptops ands desktops*/
+    #modal-box:not(.wide-modal) {
+        width: 40%;
+    }
+    #modal-box.wide-modal {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1500px) {
+    /*tablet, landscape iPad, lo-res laptops ands desktops*/
+    #modal-box.wide-modal {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1700px) {
+    /*tablet, landscape iPad, lo-res laptops ands desktops*/
+    #modal-box.wide-modal {
+        width: 50%;
+    }
+}
+
+/*Add Animation*/
+@keyframes fade-in-modal {
+    from {
+        transform: scale(0.97);
+        opacity: 0
+    }
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}

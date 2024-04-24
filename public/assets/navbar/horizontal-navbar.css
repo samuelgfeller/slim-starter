@@ -1,0 +1,293 @@
+:root {
+    /*With a 50px height on nav div*/
+    --nav-burger-icon-size: 0.8;
+    --mobile-nav-height: 50px;
+}
+
+/*mobile first min-width sets base and content is adapted to computers.*/
+@media (min-width: 100px) {
+    /*Nav*/
+    nav {
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        max-width: 100%;
+        /*background-color: rgba(255, 255, 255, 0.44);*/
+        /*background-color: rgba(0, 0, 0, 0.05);*/
+        background-color: #282A36;
+        padding: 0 20px;
+        border-radius: 25px; /*Open borders shouldn't be too round*/
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        /*Has to be same height than brand name line height and phone outer div (auto for desktop but relevant for mobile)*/
+        height: var(--mobile-nav-height); /*fixed height to center nav-icon and bypass transition movement when opened*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    nav div {
+        display: inline-block;
+        height: 100%;
+    }
+
+    #nav-links-div{
+        width: 100%;
+    }
+
+    #brand-name-span {
+        color: #757575;
+        width: 100%;
+        display: block;
+        text-align: center;
+        /*Has to be same height than nav (auto for desktop but relevant for mobile)*/
+        line-height: 50px;
+        letter-spacing: 1vw;
+    }
+    /*Outer div needed for hover effect*/
+    #nav-phone-outer-div {
+        /*Has to be same height than nav (auto for desktop but relevant for mobile)*/
+        height: 50px;
+        display: flex;
+        align-items: center;
+        margin-right: 55px;
+        width: 100%;
+    }
+    #nav-phone-div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 99px;
+        padding: 10px;
+        height: auto;
+
+    }
+
+    #nav-phone-div:hover {
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.13);
+        background: rgba(0, 0, 0, 0.04);
+        cursor: pointer;
+    }
+
+    #nav-phone-div span {
+        /*Number hidden on mobile*/
+        display: none;
+    }
+
+    #nav-phone-div img {
+        width: 20px;
+    }
+
+    nav #nav-links-div a {
+        float: left;
+        display: block;
+        color: var(--text-color-on-primary-color-background);
+        text-align: center;
+        padding: 20px 10px;
+        text-decoration: none;
+        transition: 0.3s;
+        width: 50%;
+        position: relative;
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    nav #nav-links-div a:hover {
+        font-weight: normal; /*default hover over links makes it bold*/
+        text-shadow: none;
+    }
+
+    nav #nav-links-div a:before, #nav-indicator {
+        position: absolute;
+        left: 15%;
+        width: 70%;
+        height: 5px;
+        border-radius: 8px 8px 0 0;
+    }
+
+    /*Similar than #nav-indicator*/
+    nav #nav-links-div a:before {
+        content: "";
+        bottom: -6px;
+        background-color: #dfe2ea;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    /*Here because it shares a lot with a:before*/
+    #nav-indicator {
+        bottom: 0;
+        margin: auto;
+        transition: 0.4s;
+        z-index: 1;
+        background: var(--accent-color);
+        display: none;
+        
+    }
+
+    nav #nav-links-div a {
+        display: none;
+    }
+
+    nav #nav-links-div a.is-active {
+        color: var(--accent-text-color-on-primary-color-background);
+    }
+
+    nav #nav-links-div a.icon {
+        float: right;
+        display: block;
+    }
+
+    nav.open {
+        height: auto;
+    }
+
+    nav.open .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    nav.open #nav-links-div a {
+        display: block;
+    }
+
+    nav #nav-links-div a:not(.is-active):hover:before {
+        opacity: 1;
+        bottom: 0;
+    }
+
+    nav #nav-links-div a:not(.is-active):hover {
+        color: var(--accent-text-color-on-primary-color-background);
+    }
+
+    #nav-burger-icon {
+        width: calc(40px * var(--nav-burger-icon-size));
+        height: calc(30px * var(--nav-burger-icon-size));
+        position: absolute;
+        right: 25px;
+        top: calc(10px / var(--nav-burger-icon-size));
+        float: right;
+        display: block;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+    }
+
+    #nav-burger-icon span {
+        display: block;
+        position: absolute;
+        height: calc(6px * var(--nav-burger-icon-size));
+        width: 100%;
+        background: var(--accent-color);
+        border-radius: calc(6px * var(--nav-burger-icon-size));
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+    }
+
+    #nav-burger-icon span:nth-child(1) {
+        top: 0;
+    }
+
+    #nav-burger-icon span:nth-child(2), #nav-burger-icon span:nth-child(3) {
+        top: calc(12px * var(--nav-burger-icon-size));
+    }
+
+    #nav-burger-icon span:nth-child(4) {
+        top: calc(24px * var(--nav-burger-icon-size));
+    }
+
+    nav.open #nav-burger-icon span:nth-child(1) {
+        top: calc(12px * var(--nav-burger-icon-size));
+        width: 0;
+        left: 50%;
+    }
+
+    nav.open #nav-burger-icon span:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    nav.open #nav-burger-icon span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    nav.open #nav-burger-icon span:nth-child(4) {
+        top: calc(12px * var(--nav-burger-icon-size));
+        width: 0;
+        left: 50%;
+    }
+
+}
+
+@media (min-width: 700px) {
+    /*iPad mini breakpoint*/
+    #nav-phone-div{
+        padding: 8px 13px;
+    }
+    #nav-phone-div span {
+        /*Number hidden on mobile*/
+        display: inline-block;
+    }
+}
+
+@media (min-width: 961px) {
+    /*tablet, landscape iPad, lo-res laptops ands desktops*/
+    /*Desktop Nav*/
+    nav {
+        height: auto;
+        border-radius: 999px;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        /*flex-direction: row-reverse;*/
+    }
+
+    nav #nav-links-div a {
+        float: none;
+        display: inline-block;
+        text-align: left;
+        text-decoration: none;
+        /*font-size: 17px;*/
+        transition: 0.3s;
+        width: auto;
+        position: relative;
+        margin: 0 6px;
+    }
+
+    nav #nav-links-div a:before, #nav-indicator {
+        width: auto;
+        left: 0;
+    }
+
+    nav .icon {
+        display: none;
+    }
+
+    #brand-name-span {
+        display: none;
+    }
+
+    #nav-burger-icon {
+        display: none;
+    }
+
+    #nav-links-div{
+        width: auto;
+    }
+    #nav-phone-outer-div {
+        width: auto;
+        margin-right: 0;
+    }
+    #nav-phone-div {
+        padding: 10px 15px;
+    }
+}
+
+/*Desktop / mobile nav breakpoint. If min-width changes, navbar.js should be updated as well*/
+@media (min-width: 1025px) {
+    /*big landscape tablets, laptops, and desktops*/
+
+
+}

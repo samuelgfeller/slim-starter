@@ -1,0 +1,62 @@
+:root{
+    --plus-btn-background: rgba(46, 62, 80, 0.6)
+}
+[data-theme="dark"] {
+    --plus-btn-background: rgba(71, 95, 122, 0.6);
+}
+
+
+.plus-btn {
+    vertical-align: middle;
+    margin: 20px;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    /*bottom: 50px;*/
+    /*right: 30px;*/
+    color: #694100;
+    background: var(--plus-btn-background);
+    /*box-shadow: 0 0 10px 0 rgba(0, 110, 181,0.3);*/
+    border-radius: 999px;
+}
+
+.plus-btn:before, .plus-btn:after {
+    content: "";
+    position: absolute;
+    /*background-color: rgb(0, 104, 173);*/
+    background-color: white;
+    transition: transform 0.25s ease-out;
+    /*box-shadow: 0 0 15px 0 rgb(0, 110, 181);*/
+    /*box-shadow: 0 0 15px 0 white;*/
+    border-radius: 999px;
+}
+
+/*Vertical line*/
+.plus-btn:before {
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 60%;
+
+    margin-left: -1px;
+    transform: translateY(-50%);
+    /*transform: translate(-50%, -50%);*/
+}
+
+/*horizontal line*/
+.plus-btn:after {
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 2px;
+    margin-top: -1px;
+    transform: translateX(-50%);
+}
+
+.plus-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(46, 62, 80, 0.5);
+}
+
+

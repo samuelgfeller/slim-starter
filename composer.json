@@ -1,0 +1,68 @@
+{
+  "name": "samuelgfeller/slim-starter",
+  "description": "Slim 4 starter with frontend and API endpoint",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "slim/slim": "^4",
+    "monolog/monolog": "^3",
+    "php-di/php-di": "^7.0",
+    "cakephp/database": "^5",
+    "slim/php-view": "^3.0",
+    "cakephp/validation": "^5.0",
+    "selective/basepath": "^2.0",
+    "nyholm/psr7": "^1.5",
+    "nyholm/psr7-server": "^1.1",
+    "fig/http-message-util": "^1.1",
+    "samuelgfeller/slim-error-renderer": "^1",
+    "php": "^8.2",
+    "ext-pdo": "*",
+    "ext-json": "*",
+    "ext-gettext": "*",
+    "ext-intl": "*"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "phpunit/phpunit": "^11",
+    "phpstan/phpstan": "^1",
+    "jetbrains/phpstorm-attributes": "^1.0",
+    "friendsofphp/php-cs-fixer": "^3",
+    "odan/phinx-migrations-generator": "^6",
+    "samuelgfeller/test-traits": "^6"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    },
+    "files": [
+      "config/functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "App\\Test\\": "tests/"
+    }
+  },
+  "scripts": {
+    "stan": "phpstan analyse -c phpstan.neon --no-progress --ansi",
+    "test": "php ./vendor/bin/phpunit --configuration phpunit.xml --do-not-cache-result --colors=always",
+    "test:coverage": "php -d xdebug.mode=coverage -r \"require 'vendor/bin/phpunit';\" -- --configuration phpunit.xml --do-not-cache-result --colors=always --coverage-clover build/logs/clover.xml --coverage-html build/coverage",
+    "cs:check": "php-cs-fixer fix --dry-run --format=txt --verbose --diff --config=.cs.php --ansi",
+    "cs:fix": "php-cs-fixer fix --config=.cs.php --ansi --verbose",
+    "migration:generate": [
+      "phinx-migrations generate --overwrite -c config/env/env.phinx.php --ansi",
+      "@schema:generate"
+    ],
+    "migrate:prod": "vendor/bin/phinx migrate -c config/env/env.phinx.php --ansi -vvv",
+    "migrate": [
+      "@migrate:prod",
+      "@schema:generate"
+    ],
+    "schema:generate": [
+      "php bin/console.php SqlSchemaGenerator generateMySqlSchema",
+      "@add-migrations-to-git"
+    ],
+    "add-migrations-to-git": "git add resources/migrations/* && git add resources/schema/*",
+    "seed": "php vendor/bin/phinx seed:run -c config/env/env.phinx.php"
+  }
+}

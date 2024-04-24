@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <title>Slim Starter - frontend</title>
+</head>
+<body>
+<h1>Example frontend for the API endpoint of the Slim Starter</h1>
+<p>This frontend is an example of a separate application that communicates with the API of the
+    <a href="https://github.com/samuelgfeller/slim-starter">Slim Starter</a> template.</p>
+<p>The link to the actual frontend must be added to the <code>$settings['api']['allowed_origin']</code>
+    in the config files: <code class="file-name">config/env/env.dev.php</code> and
+    <code class="file-name">config/env/env.prod.php</code>.
+</p>
+<p>You can test the API by clicking on the button below which will make an Ajax
+    GET request to retrieve the list of users
+    that are in the database.</p>
+<button id="request-users-btn">GET /users</button>
+<code id="access-header-output" style="display: none"></code>
+<pre id="request-output" style="display: none"></pre>
+
+<script src="script.js"></script>
+</body>
+</html>

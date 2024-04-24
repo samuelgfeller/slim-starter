@@ -1,0 +1,52 @@
+:root {
+    --skeleton-loader-moving-part-colors: rgba(251, 251, 251, .05),
+    rgba(251, 251, 251, .3),
+    rgba(251, 251, 251, .6),
+    rgba(251, 251, 251, .3),
+    rgba(251, 251, 251, .05);
+}
+
+[data-theme="dark"] {
+    --skeleton-loader-moving-part-colors: rgba(80, 80, 80, .05),
+    rgba(80, 80, 80, .3),
+    rgba(80, 80, 80, 0.6),
+    rgba(80, 80, 80, .3),
+    rgba(80, 80, 80, .05);
+}
+
+
+.moving-skeleton-loader-part-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: var(--background-accent-2-color);
+    z-index: 8;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.moving-skeleton-loader-part {
+    position: absolute;
+    left: -45%;
+    height: 100%;
+    width: 45%;
+    background-image: linear-gradient(to left,
+    var(--skeleton-loader-moving-part-colors));
+    animation: loading 1s infinite;
+    z-index: 9;
+}
+
+.text-line-skeleton-loader {
+    height: 18px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+@keyframes loading {
+    0% {
+        left: -45%;
+    }
+    100% {
+        left: 100%;
+    }
+}

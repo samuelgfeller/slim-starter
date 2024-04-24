@@ -1,0 +1,83 @@
+# Documentation: https://github.com/samuelgfeller/slim-example-project/wiki/GitHub-Actions#build-testing
+# How to deploy: https://github.com/samuelgfeller/slim-example-project/wiki/GitHub-Actions#deploying-to-server
+name: 🧪 Build test
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+
+env:
+  # Set APP_ENV to 'github' so that settings.php loads the correct configuration for database migrations and testing
+  APP_ENV: github
+
+jobs:
+  run:
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ ubuntu-latest ]
+        php-versions: [ '8.2' ]
+        test-database: [ 'slim_starter_test' ]
+    name: PHP ${{ matrix.php-versions }} Test
+
+    services:
+      mysql:
+        image: mysql:8.0.23
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_ALLOW_EMPTY_PASSWORD: true
+          MYSQL_DATABASE: test
+        ports:
+          - 33306:3306
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: mbstring, pdo, pdo_mysql, intl, zip
+          coverage: none
+
+      - name: Check PHP version
+        run: php -v
+
+      - name: Check Composer version
+        run: composer -V
+
+      - name: Check PHP extensions
+        run: php -m
+
+      - name: Check MySQL version
+        run: mysql -V
+
+      - name: Start MySQL
+        run: sudo systemctl start mysql
+
+      - name: Check MySQL variables
+        run: mysql -uroot -proot -e "SHOW VARIABLES LIKE 'version%';"
+
+      - name: Create database
+        run: mysql -uroot -proot -e 'CREATE DATABASE IF NOT EXISTS ${{ matrix.test-database }} CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;'
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+
+      - name: Install dependencies
+        run: composer update --no-ansi --no-interaction --no-progress
+
+      - name: Execute database migrations
+        run: composer migrate:prod
+
+      - name: Show test db tables
+        run: mysql -uroot -proot -D ${{ matrix.test-database }} -e "SHOW TABLES;"
+
+      - name: Run test suite
+        run: composer test
+        env:
+          PHP_CS_FIXER_IGNORE_ENV: 1

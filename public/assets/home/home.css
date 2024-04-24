@@ -1,0 +1,59 @@
+/*mobile first min-width sets base and content is adapted to computers.*/
+@media (min-width: 100px) {
+    #home-page-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    #documentation-div {
+        padding: 25px 25px 15px 25px;
+        border-radius: 40px;
+        border: 7px solid var(--primary-color);
+        display: inline-block;
+        width: 100%;
+        position: relative;
+    }
+
+    #documentation-div h3 {
+        margin-top: 0;
+    }
+
+    #documentation-div > a:hover #doc-icon {
+        filter: var(--accent-darker-color-filter);
+    }
+
+    #doc-icon {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+}
+
+/*portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones*/
+@media (min-width: 641px) {
+
+}
+
+/*At this breakpoint it looks good to have two columns*/
+@media (min-width: 755px) {
+
+    #home-page-content {
+        flex-direction: row;
+        align-items: start;
+    }
+
+    #documentation-div {
+        margin-top: 30px;
+        width: 40%;
+        max-width: 600px;
+        min-width: 320px;
+    }
+}
+
+/*tablet, landscape iPad, lo-res laptops ands desktops*/
+@media (min-width: 961px) {
+}
