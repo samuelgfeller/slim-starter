@@ -1,8 +1,9 @@
 <div align="center">
 <a href="https://github.com/samuelgfeller/slim-starter">
-<img src="https://github.com/samuelgfeller/slim-example-project/assets/31797204/8e39b63f-adbf-443c-8ed9-dc5924fd4e0c" width="140">  
+<img src="https://github.com/samuelgfeller/slim-example-project/assets/31797204/8e39b63f-adbf-443c-8ed9-dc5924fd4e0c" width="100px">  
 </a>
-<h2>Slim Starter</h2>
+
+## Slim Starter
 
 [![Latest Version on Packagist](https://img.shields.io/github/release/samuelgfeller/slim-starter.svg)](https://packagist.org/packages/slim-starter)
 [![Code Coverage](https://scrutinizer-ci.com/g/samuelgfeller/slim-starter/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/samuelgfeller/slim-starter/?branch=master)
