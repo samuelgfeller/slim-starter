@@ -1,6 +1,7 @@
 <?php
 /**
  * Secret environment specific configuration values.
+ * Configuration documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Configuration.
  *
  * Make sure this env.php file is added to .gitignore and ideally place it outside
  * the project root directory.

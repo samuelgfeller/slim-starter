@@ -44,9 +44,9 @@ build:
     before:
       - composer self-update
       - mysql -uroot -e "CREATE DATABASE IF NOT EXISTS slim_starter_test CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
-    tests:
-      before:
-        - command: composer test:coverage
-          coverage:
-            file: 'build/logs/clover.xml'
-            format: 'clover'
+  tests:
+    before:
+      - command: composer test:coverage
+        coverage:
+          file: 'build/logs/clover.xml'
+          format: 'clover'

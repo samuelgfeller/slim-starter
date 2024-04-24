@@ -1,7 +1,6 @@
 <?php
 /**
  * Development specific configuration values.
- * Configuration documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Configuration.
  *
  * Every key must be set by its own to not overwrite the entire array.
  * Correct: $settings['db]['key'] = 'val'; $settings['db]['nextKey'] = 'nextVal';
