@@ -5,7 +5,7 @@
 
 ## Slim Starter
 
-[![Latest Version on Packagist](https://img.shields.io/github/release/samuelgfeller/slim-starter.svg)](https://packagist.org/packages/slim-starter)
+[![Latest Version on Packagist](https://img.shields.io/github/release/samuelgfeller/slim-starter.svg)](https://packagist.org/packages/samuelgfeller/slim-starter)
 [![Code Coverage](https://scrutinizer-ci.com/g/samuelgfeller/slim-starter/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/samuelgfeller/slim-starter/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/samuelgfeller/slim-starter/badges/build.png?b=master)](https://scrutinizer-ci.com/g/samuelgfeller/slim-starter/build-status/master)
 [![Quality Score](https://img.shields.io/scrutinizer/quality/g/samuelgfeller/slim-starter.svg)](https://scrutinizer-ci.com/g/samuelgfeller/slim-starter/?branch=master)
@@ -57,8 +57,7 @@ a lot more features and examples.
 * [Query Builder](https://github.com/samuelgfeller/slim-example-project/wiki/Repository-and-Query-Builder) - [cakephp/database](https://book.cakephp.org/5/en/orm/query-builder.html)
 * [Integration testing](https://github.com/samuelgfeller/slim-example-project/wiki/Writing-Tests) - [PHPUnit](https://github.com/sebastianbergmann/phpunit/)
 * [Error handling](https://github.com/samuelgfeller/slim-example-project/wiki/Error-Handling) - [slim-error-renderer](https://github.com/samuelgfeller/slim-error-renderer)
-* [GitHub Actions](https://github.com/samuelgfeller/slim-example-project/wiki/GitHub-Actions)
-* [Scrutinizer](https://github.com/samuelgfeller/slim-example-project/wiki/How-to-set-up-Scrutinizer)
+* [GitHub Actions](https://github.com/samuelgfeller/slim-example-project/wiki/GitHub-Actions) & [Scrutinizer](https://github.com/samuelgfeller/slim-example-project/wiki/How-to-set-up-Scrutinizer)
 * [Coding standards fixer](https://github.com/samuelgfeller/slim-example-project/wiki/Coding-Standards-Fixer) - [PHP-CS-Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)
 * [Static code analysis](https://github.com/samuelgfeller/slim-example-project/wiki/PHPStan-Static-Code-Analysis) - [PHPStan](https://github.com/phpstan/phpstan)
 

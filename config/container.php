@@ -48,7 +48,7 @@ return [
         return $container->get(Psr17Factory::class);
     },
 
-    // For PHP-View and the RedirectHandler
+    // Required to create urls with urlFor
     RouteParserInterface::class => function (ContainerInterface $container) {
         return $container->get(App::class)->getRouteCollector()->getRouteParser();
     },
