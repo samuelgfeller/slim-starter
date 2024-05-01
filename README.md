@@ -29,7 +29,7 @@ are kept to a minimum and to allow for most flexibility and long-term viability.
 
 The base for this project was the official
 [Slim-Skeleton](https://github.com/slimphp/Slim-Skeleton) and
-the [slim4-skeleton](https://github.com/odan/slim4-skeleton)
+Odan's [slim4-skeleton](https://github.com/odan/slim4-skeleton)
 but with a lot of additional opinionated
 features and examples such as:
 
@@ -49,15 +49,15 @@ a lot more features and examples.
 
 * [Slim 4 micro-framework](https://github.com/slimphp/Slim)
 * [Dependency Injection](https://github.com/samuelgfeller/slim-example-project/wiki/Dependency-Injection) - [PHP-DI](https://php-di.org/)
-* [Template rendering](https://github.com/samuelgfeller/slim-example-project/wiki/Template-rendering) - [PHP-View](https://github.com/slimphp/PHP-View)
-(easily replaceable with [Twig](https://twig.symfony.com/) and [Twig-View](https://github.com/slimphp/Twig-View))
+* [Template rendering](https://github.com/samuelgfeller/slim-example-project/wiki/Template-rendering) - [PHP-View](https://github.com/slimphp/PHP-View) 
+(can be replaced by [Twig](https://twig.symfony.com/))
 * [Logging](https://github.com/samuelgfeller/slim-example-project/wiki/Logging) - [Monolog](https://github.com/Seldaek/monolog)
 * [Database migrations](https://github.com/samuelgfeller/slim-example-project/wiki/Database-Migrations) - [Phinx](https://phinx.org/)
 * [Validation](https://github.com/samuelgfeller/slim-example-project/wiki/Validation) - [cakephp/validation](https://book.cakephp.org/4/en/core-libraries/validation.html)
 * [Query Builder](https://github.com/samuelgfeller/slim-example-project/wiki/Repository-and-Query-Builder) - [cakephp/database](https://book.cakephp.org/5/en/orm/query-builder.html)
 * [Integration testing](https://github.com/samuelgfeller/slim-example-project/wiki/Writing-Tests) - [PHPUnit](https://github.com/sebastianbergmann/phpunit/)
 * [Error handling](https://github.com/samuelgfeller/slim-example-project/wiki/Error-Handling) - [slim-error-renderer](https://github.com/samuelgfeller/slim-error-renderer)
-* [GitHub Actions](https://github.com/samuelgfeller/slim-example-project/wiki/GitHub-Actions) & [Scrutinizer](https://github.com/samuelgfeller/slim-example-project/wiki/How-to-set-up-Scrutinizer)
+* [GitHub Actions](https://github.com/samuelgfeller/slim-example-project/wiki/GitHub-Actions) and [Scrutinizer](https://github.com/samuelgfeller/slim-example-project/wiki/How-to-set-up-Scrutinizer)
 * [Coding standards fixer](https://github.com/samuelgfeller/slim-example-project/wiki/Coding-Standards-Fixer) - [PHP-CS-Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)
 * [Static code analysis](https://github.com/samuelgfeller/slim-example-project/wiki/PHPStan-Static-Code-Analysis) - [PHPStan](https://github.com/phpstan/phpstan)
 
