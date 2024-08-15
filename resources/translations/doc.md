@@ -1,1 +1,1 @@
-[Set up localization](https://github.com/samuelgfeller/slim-example-project/wiki/Translations)
+[Set up localization](https://samuel-gfeller.ch/docs/Translations)

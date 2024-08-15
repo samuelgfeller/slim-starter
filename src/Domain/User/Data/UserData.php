@@ -6,7 +6,7 @@ namespace App\Domain\User\Data;
  * User DTO (Data Transfer Object) class.
  * This class is used to transfer data between the different layers of the application
  * and serialize it for the frontend or database.
- * Documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Domain#data-transfer-object-dto.
+ * Documentation: https://samuel-gfeller.ch/docs/Domain#data-transfer-object-dto.
  */
 class UserData implements \JsonSerializable
 {

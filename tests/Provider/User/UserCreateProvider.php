@@ -3,7 +3,7 @@
 namespace App\Test\Provider\User;
 
 /**
- * Provider documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Writing-Tests#data-providers.
+ * Provider documentation: https://samuel-gfeller.ch/docs/Writing-Tests#data-providers.
  */
 class UserCreateProvider
 {

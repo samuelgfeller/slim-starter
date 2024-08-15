@@ -1,7 +1,7 @@
 <?php
 /**
  * Secret environment specific configuration values.
- * Configuration documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Configuration.
+ * Configuration documentation: https://samuel-gfeller.ch/docs/Configuration.
  *
  * Make sure this env.php file is added to .gitignore and ideally place it outside
  * the project root directory.
@@ -12,8 +12,8 @@
  */
 
 // $_ENV['APP_ENV'] should be set to "prod" in the secret env.php file of the prod server.
-// APP_ENV should NOT be set to "dev" in the development secret env.php as it
-// would override the phpunit.xml APP_ENV setting.
+// APP_ENV must NOT be set to "dev" in the development secret env.php as it's already the default value
+// and would override the phpunit.xml APP_ENV "test" setting.
 
 // Database
 $settings['db']['host'] = 'localhost';

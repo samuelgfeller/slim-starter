@@ -9,18 +9,17 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/samuelgfeller/slim-starter/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/samuelgfeller/slim-starter/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/samuelgfeller/slim-starter/badges/build.png?b=master)](https://scrutinizer-ci.com/g/samuelgfeller/slim-starter/build-status/master)
 [![Quality Score](https://img.shields.io/scrutinizer/quality/g/samuelgfeller/slim-starter.svg)](https://scrutinizer-ci.com/g/samuelgfeller/slim-starter/?branch=master)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/samuelgfeller/slim-starter/blob/master/LICENSE)
 
-[Slim 4](https://www.slimframework.com/) full stack starter template to
-quickly get started with a scalable PHP web application following 2024 best practices and
-[SOLID](https://en.wikipedia.org/wiki/SOLID) principles.
+[Slim 4](https://www.slimframework.com/) full stack starter template following 2024 best practices and
+[SOLID](https://en.wikipedia.org/wiki/SOLID) principles to quickly get started with a scalable PHP web application.
 
-An extensive [**documentation**](https://github.com/samuelgfeller/slim-example-project/wiki) explains
-the [architecture](https://github.com/samuelgfeller/slim-example-project/wiki/Architecture), components,
+An extensive [**documentation**](https://samuel-gfeller/docs) explains
+the [architecture](https://samuel-gfeller.ch/docs/Architecture), components,
 design choices (i.e. 
-[SRP](https://github.com/samuelgfeller/slim-example-project/wiki/Single-Responsibility-Principle-(SRP)))
+[SRP](https://samuel-gfeller.ch/docs/Single-Responsibility-Principle-(SRP)))
 and features.  
-[Libraries](https://github.com/samuelgfeller/slim-example-project/wiki/Libraries-and-Framework)
+[Libraries](https://samuel-gfeller.ch/docs/Libraries-and-Framework)
 are kept to a minimum and to allow for most flexibility and long-term viability.
 
 </div>
@@ -33,7 +32,7 @@ Odan's [slim4-skeleton](https://github.com/odan/slim4-skeleton)
 but with a lot of additional opinionated
 features and examples such as:
 
-* Pages rendered by a [template renderer](https://github.com/samuelgfeller/slim-example-project/wiki/Template-rendering) 
+* Pages rendered by a [template renderer](https://samuel-gfeller.ch/docs/Template-Rendering) 
 with layout and versioned assets
 * The loading of elements from the database (users) via Ajax
 * The creation, modification, and deletion of users with validation
@@ -48,22 +47,22 @@ a lot more features and examples.
 ### Technologies
 
 * [Slim 4 micro-framework](https://github.com/slimphp/Slim)
-* [Dependency Injection](https://github.com/samuelgfeller/slim-example-project/wiki/Dependency-Injection) - [PHP-DI](https://php-di.org/)
-* [Template rendering](https://github.com/samuelgfeller/slim-example-project/wiki/Template-rendering) - [PHP-View](https://github.com/slimphp/PHP-View) 
+* [Dependency Injection](https://samuel-gfeller.ch/docs/Dependency-Injection) - [PHP-DI](https://php-di.org/)
+* [Template rendering](https://samuel-gfeller.ch/docs/Template-Rendering) - [PHP-View](https://github.com/slimphp/PHP-View) 
 (can be replaced by [Twig](https://twig.symfony.com/))
-* [Logging](https://github.com/samuelgfeller/slim-example-project/wiki/Logging) - [Monolog](https://github.com/Seldaek/monolog)
-* [Database migrations](https://github.com/samuelgfeller/slim-example-project/wiki/Database-Migrations) - [Phinx](https://phinx.org/)
-* [Validation](https://github.com/samuelgfeller/slim-example-project/wiki/Validation) - [cakephp/validation](https://book.cakephp.org/4/en/core-libraries/validation.html)
-* [Query Builder](https://github.com/samuelgfeller/slim-example-project/wiki/Repository-and-Query-Builder) - [cakephp/database](https://book.cakephp.org/5/en/orm/query-builder.html)
-* [Integration testing](https://github.com/samuelgfeller/slim-example-project/wiki/Writing-Tests) - [PHPUnit](https://github.com/sebastianbergmann/phpunit/)
-* [Error handling](https://github.com/samuelgfeller/slim-example-project/wiki/Error-Handling) - [slim-error-renderer](https://github.com/samuelgfeller/slim-error-renderer)
-* [GitHub Actions](https://github.com/samuelgfeller/slim-example-project/wiki/GitHub-Actions) and [Scrutinizer](https://github.com/samuelgfeller/slim-example-project/wiki/How-to-set-up-Scrutinizer)
-* [Coding standards fixer](https://github.com/samuelgfeller/slim-example-project/wiki/Coding-Standards-Fixer) - [PHP-CS-Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)
-* [Static code analysis](https://github.com/samuelgfeller/slim-example-project/wiki/PHPStan-Static-Code-Analysis) - [PHPStan](https://github.com/phpstan/phpstan)
+* [Logging](https://samuel-gfeller.ch/docs/Logging) - [Monolog](https://github.com/Seldaek/monolog)
+* [Database migrations](https://samuel-gfeller.ch/docs/Database-Migrations) - [Phinx](https://phinx.org/)
+* [Validation](https://samuel-gfeller.ch/docs/Validation) - [cakephp/validation](https://book.cakephp.org/4/en/core-libraries/validation.html)
+* [Query Builder](https://samuel-gfeller.ch/docs/Repository-and-Query-Builder) - [cakephp/database](https://book.cakephp.org/5/en/orm/query-builder.html)
+* [Integration testing](https://samuel-gfeller.ch/docs/Writing-Tests) - [PHPUnit](https://github.com/sebastianbergmann/phpunit/)
+* [Error handling](https://samuel-gfeller.ch/docs/Error-Handling) - [slim-error-renderer](https://github.com/samuelgfeller/slim-error-renderer)
+* [GitHub Actions](https://samuel-gfeller.ch/docs/GitHub-Actions) and [Scrutinizer](https://samuel-gfeller.ch/docs/How-to-set-up-Scrutinizer)
+* [Coding standards fixer](https://samuel-gfeller.ch/docs/Coding-Standards-Fixer) - [PHP-CS-Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)
+* [Static code analysis](https://samuel-gfeller.ch/docs/PHPStan-Static-Code-Analysis) - [PHPStan](https://github.com/phpstan/phpstan)
 
 ## Requirements
 * PHP 8.2+
-* [Composer](https://github.com/samuelgfeller/slim-example-project/wiki/Composer)
+* [Composer](https://samuel-gfeller.ch/docs/Composer)
 * MariaDB or MySQL database
 
 ## Installation
@@ -93,7 +92,7 @@ accidentally truncating the development database while testing.
 $settings['db']['database'] = 'my_dev_database_name_test';
 ```
 
-The [Configuration](https://github.com/samuelgfeller/slim-example-project/wiki/Configuration) 
+The [Configuration](https://samuel-gfeller.ch/docs/Configuration) 
 documentation details the different configuration files and how they are used and loaded. 
 
 #### 3. Run migrations
@@ -120,7 +119,7 @@ your test database as specified in `config/env/env.test.php`.
 
 If you don't plan on using Scrutinizer, remove the `.scrutinizer` file at the root of the project,
 otherwise you can follow this
-[guide](https://github.com/samuelgfeller/slim-example-project/wiki/How-to-set-up-Scrutinizer)
+[guide](https://samuel-gfeller.ch/docs/How-to-set-up-Scrutinizer)
 on how to set it up.
 
 #### Done!
@@ -132,7 +131,7 @@ directory.
 
 ## Support
 
-Please read the [Support❤️](https://github.com/samuelgfeller/slim-example-project/wiki/Support❤️) page
+Please read the [Support❤️](https://samuel-gfeller.ch/docs/Support❤️) page
 if you value this project and its documentation and want to support it.
 
 ## License

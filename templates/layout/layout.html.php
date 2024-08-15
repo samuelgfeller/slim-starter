@@ -1,7 +1,7 @@
 <?php
 /**
  * Layout template.
- * Template rendering documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Template-rendering.
+ * Template rendering documentation: https://samuel-gfeller.ch/docs/Template-Rendering.
  *
  * @var Slim\Views\PhpRenderer $this
  * @var string $basePath
@@ -52,8 +52,8 @@ echo $this->fetch(
     <title><?php echo html($config['app_name']); ?></title>
 
     <script>
-        // Dark theme: https://github.com/samuelgfeller/slim-example-project/wiki/Dark-Theme
-        // Add the theme immediately to the <html> element before everything else for the correct colors
+        // Dark theme: https://samuel-gfeller.ch/docs/Dark-Theme
+        // Add the theme immediately to the <html> element before everything else for the correct colors on load
         document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') ?? 'light');
     </script>
 </head>
@@ -66,7 +66,7 @@ echo $this->fetch(
         <?php echo $this->fetch('layout/navbar.html.php', []); ?>
 
         <?php
-    // Add session and flash messages: https://github.com/samuelgfeller/slim-example-project/wiki/Session-and-Flash-messages
+    // Add session and flash messages: https://samuel-gfeller.ch/docs/Session-and-Flash-messages
 ?>
     </header>
 

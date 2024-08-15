@@ -8,7 +8,7 @@
  * without the risk of overwriting something.
  * The only file where the following is permitted: $settings['db'] = ['key' => 'val', 'nextKey' => 'nextVal'];
  *
- * Documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Configuration.
+ * Documentation: https://samuel-gfeller.ch/docs/Configuration.
  */
 // Set default locale
 setlocale(LC_ALL, 'en_US.utf8', 'en_US');
@@ -25,7 +25,7 @@ $settings['deployment'] = [
     'version' => '0.0.0',
     // When true, JsImportCacheBuster is enabled and goes through all js files and changes the version number
     // from the imports. Should be disabled in env.prod.php.
-    // https://github.com/samuelgfeller/slim-example-project/wiki/Template-rendering#js-import-cache-busting
+    // https://samuel-gfeller.ch/docs/Template-Rendering#js-import-cache-busting
     'update_js_imports_version' => false,
     // Asset path required by the JsImportCacheBuster
     'asset_path' => $settings['root_dir'] . '/public/assets',
@@ -46,7 +46,7 @@ $settings['public'] = [
 
 // Secret values are overwritten in env.php
 // Query Builder: https://book.cakephp.org/5/en/orm/query-builder.html
-// Documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Repository-and-Query-Builder
+// Documentation: https://samuel-gfeller.ch/docs/Repository-and-Query-Builder
 $settings['db'] = [
     'host' => '127.0.0.1',
     'database' => 'slim_starter',
@@ -74,14 +74,14 @@ $settings['db'] = [
     ],
 ];
 
-// API documentation: https://github.com/samuelgfeller/slim-example-project/wiki/API-Endpoint
+// API documentation: https://samuel-gfeller.ch/docs/API-Endpoint
 $settings['api'] = [
     // Url that is allowed to make api calls to this app
     'allowed_origin' => null,
 ];
 
 // Phinx database migration settings
-// Documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Database-Migrations
+// Documentation: https://samuel-gfeller.ch/docs/Database-Migrations
 // Libraries: https://github.com/odan/phinx-migrations-generator, https://book.cakephp.org/phinx/0/en/index.html
 $settings['phinx'] = [
     'paths' => [
@@ -102,13 +102,13 @@ $settings['phinx'] = [
 ];
 
 // Template renderer settings
-// Documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Template-rendering
+// Documentation: https://samuel-gfeller.ch/docs/Template-Rendering
 $settings['renderer'] = [
     // Template path
     'path' => $settings['root_dir'] . '/templates',
 ];
 
-// Logger: https://github.com/samuelgfeller/slim-example-project/wiki/Logging
+// Logger: https://samuel-gfeller.ch/docs/Logging
 $settings['logger'] = [
     // Log file location
     'path' => $settings['root_dir'] . '/logs',

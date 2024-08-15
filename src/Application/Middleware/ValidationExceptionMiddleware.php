@@ -12,7 +12,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 /**
  * Middleware for handling validation exceptions.
- * Documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Validation.
+ * Documentation: https://samuel-gfeller.ch/docs/Validation.
  */
 final readonly class ValidationExceptionMiddleware implements MiddlewareInterface
 {

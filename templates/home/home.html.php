@@ -1,13 +1,13 @@
 <?php
 /**
- * Template rendering documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Template-rendering.
+ * Template rendering documentation: https://samuel-gfeller.ch/docs/Template-Rendering.
  *
  * @var Slim\Views\PhpRenderer $this Rendering engine
  * @var string $basePath Base path
  */
 $this->setLayout('layout/layout.html.php');
 
-// Asset handling https://github.com/samuelgfeller/slim-example-project/wiki/Template-rendering#asset-handling
+// Asset handling https://samuel-gfeller.ch/docs/Template-Rendering#asset-handling
 $this->addAttribute('css', [
     'assets/home/home.css',
 ]);
@@ -49,43 +49,43 @@ $this->addAttribute('css', [
                 <a target="_blank" href="https://github.com/slimphp/Slim">Slim 4 micro-framework</a>
             </li>
             <li><a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/Dependency-Injection">Dependency
+                   href="https://samuel-gfeller.ch/docs/Dependency-Injection">Dependency
                     Injection</a> - <a target="_blank" href="https://php-di.org/">PHP-DI</a></li>
             <li><a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/Template-rendering">Template
+                   href="https://samuel-gfeller.ch/docs/Template-Rendering">Template
                     rendering
                 </a> - <a target="_blank" href="https://github.com/slimphp/PHP-View">PHP-View</a></li>
             <li><a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/Database-Migrations">Database
+                   href="https://samuel-gfeller.ch/docs/Database-Migrations">Database
                     migrations</a> - <a target="_blank" href="https://phinx.org/">Phinx</a></li>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/Validation">
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Validation">
                     Validation</a> - <a target="_blank"
                                         href="https://book.cakephp.org/4/en/core-libraries/validation.html">
                     cakephp/validation</a>
             </li>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/Logging">Logging
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Logging">Logging
                 </a> - <a target="_blank" href="https://github.com/Seldaek/monolog">Monolog</a>
             </li>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/Writing-Tests">Integration
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Writing-Tests">Integration
                     testing</a> - <a target="_blank" href="https://github.com/sebastianbergmann/phpunit/">PHPUnit</a>
             </li>
             <li><a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/Repository-and-Query-Builder">Query
+                   href="https://samuel-gfeller.ch/docs/Repository-and-Query-Builder">Query
                     Builder</a> - <a href="https://book.cakephp.org/5/en/orm/query-builder.html">cakephp/database</a>
             </li>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/Error-Handling">Error
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Error-Handling">Error
                     handling</a> - <a target="_blank" href="https://github.com/samuelgfeller/slim-error-renderer">slim-error-renderer</a>
             </li>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/GitHub-Actions">GitHub
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/GitHub-Actions">GitHub
                     Actions</a> - <a target="_blank" href="https://scrutinizer-ci.com/">Scrutinizer</a>
             </li>
             <li><a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/Coding-Standards-Fixer">Coding
+                   href="https://samuel-gfeller.ch/docs/Coding-Standards-Fixer">Coding
                     standards fixer</a> - <a target="_blank" href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer">PHP CS
                     Fixer</a>
             </li>
             <li><a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/PHPStan-Static-Code-Analysis">
+                   href="https://samuel-gfeller.ch/docs/PHPStan-Static-Code-Analysis">
                     Static code analysis</a> - <a target="_blank" href="https://github.com/phpstan/phpstan">PHPStan</a>
             </li>
         </ul>
@@ -98,64 +98,64 @@ $this->addAttribute('css', [
         </p>
 
         <ul>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/Configuration">Configuration</a>
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Configuration">Configuration</a>
             </li>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/Composer#autoload">Composer
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Composer#autoload">Composer
                     autoload</a></li>
             <li><a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/Dependency-Injection">Dependency
+                   href="https://samuel-gfeller.ch/docs/Dependency-Injection">Dependency
                     Injection</a></li>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/Routing">Routing</a>
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Slim-Routing">Slim-Routing</a>
             </li>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/Middleware">Middleware</a>
-            </li>
-            <li><a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/Single-Action-Controller">Action</a>
-            </li>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/Domain">Domain</a>
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Slim-Middleware">Slim Middleware</a>
             </li>
             <li><a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/Repository-and-Query-Builder">
+                   href="https://samuel-gfeller.ch/docs/Single-Action-Controller">Action</a>
+            </li>
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Domain">Domain</a>
+            </li>
+            <li><a target="_blank"
+                   href="https://samuel-gfeller.ch/docs/Repository-and-Query-Builder">
                     Repository and Query Builder</a></li>
             <li><a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/Database-Migrations">Database
+                   href="https://samuel-gfeller.ch/docs/Database-Migrations">Database
                     migrations</a></li>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/Writing-Tests">Writing
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Writing-Tests">Writing
                     tests</a></li>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/Template-rendering">
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Template-Rendering">
                     Template rendering & asset handling</a></li>
             <li><a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/JavaScript-Frontend#es6-modules">JS-Modules</a>,
+                   href="https://samuel-gfeller.ch/docs/JavaScript-Frontend#es6-modules">JS-Modules</a>,
                 <a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/JavaScript-Frontend#ajax">Ajax</a>,
+                   href="https://samuel-gfeller.ch/docs/JavaScript-Frontend#ajax">Ajax</a>,
                 <a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/JavaScript-Frontend#contenteditable-fields">
+                   href="https://samuel-gfeller.ch/docs/JavaScript-Frontend#contenteditable-fields">
                     Contenteditable fields</a></li>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/Dark-Theme">Dark
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Dark-Theme">Dark
                     theme</a></li>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/Validation">Validation</a>
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Validation">Validation</a>
             </li>
 
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/Error-Handling">Error
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Error-Handling">Error
                     handling</a>
             </li>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/Architecture">Architecture</a>
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Architecture">Architecture</a>
             </li>
             <li><a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/Single-Responsibility-Principle-(SRP)">
+                   href="https://samuel-gfeller.ch/docs/Single-Responsibility-Principle-(SRP)">
                     Single Responsibility Principle</a></li>
-            <li><a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki/GitHub-Actions">CI/CD
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/GitHub-Actions">CI/CD
                     with GitHub Actions
                 </a></li>
             <li><a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/Coding-Standards-Fixer">PHP
+                   href="https://samuel-gfeller.ch/docs/Coding-Standards-Fixer">PHP
                     CS-Fixer</a> &
                 <a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/PHPStan-Static-Code-Analysis">PHPStan</a>
+                   href="https://samuel-gfeller.ch/docs/PHPStan-Static-Code-Analysis">PHPStan</a>
             </li>
             <li>
                 <a target="_blank"
-                   href="https://github.com/samuelgfeller/slim-example-project/wiki/XAMPP-Xdebug">Xdebug</a>
+                   href="https://samuel-gfeller.ch/docs/XAMPP-Xdebug">Xdebug</a>
             </li>
         </ul>
     </div>

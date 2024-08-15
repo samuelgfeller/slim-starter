@@ -5,7 +5,7 @@ use PhpCsFixer\Config;
 /**
  * The PHP-CS-Fixer configuration.
  *
- * Documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Coding-Standards-Fixer
+ * Documentation: https://samuel-gfeller.ch/docs/Coding-Standards-Fixer
  */
 return (new Config())
     // Disable the use of cache

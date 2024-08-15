@@ -1,5 +1,5 @@
-# Documentation: https://github.com/samuelgfeller/slim-example-project/wiki/GitHub-Actions#build-testing
-# How to deploy: https://github.com/samuelgfeller/slim-example-project/wiki/GitHub-Actions#deploying-to-server
+# Documentation: https://samuel-gfeller.ch/docs/GitHub-Actions#build-testing
+# How to deploy: https://samuel-gfeller.ch/docs/GitHub-Actions#deploying-to-server
 name: 🧪 Build test
 on:
   push:

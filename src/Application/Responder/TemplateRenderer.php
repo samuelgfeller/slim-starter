@@ -7,7 +7,7 @@ use Slim\Views\PhpRenderer;
 
 /**
  * Template renderer.
- * Documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Template-rendering.
+ * Documentation: https://samuel-gfeller.ch/docs/Template-Rendering.
  */
 final readonly class TemplateRenderer
 {

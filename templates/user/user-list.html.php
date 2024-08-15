@@ -5,7 +5,7 @@
 $this->setLayout('layout/layout.html.php');
 
 // Define assets that should be included
-// https://github.com/samuelgfeller/slim-example-project/wiki/Template-rendering#asset-handling
+// https://samuel-gfeller.ch/docs/Template-Rendering#asset-handling
 $this->addAttribute('css', [
     'assets/general/page-component/form/form.css',
     'assets/general/page-component/button/plus-button.css',

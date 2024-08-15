@@ -3,7 +3,7 @@
 use Phinx\Seed\AbstractSeed;
 
 /**
- * Documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Database-Migrations#seeding
+ * Documentation: https://samuel-gfeller.ch/docs/Database-Migrations#seeding
  */
 class UserSeeder extends AbstractSeed
 {

@@ -4,7 +4,7 @@ namespace App\Test\Fixture;
 
 /**
  * User values inserted into the database for testing.
- * Documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Writing-Tests#fixtures.
+ * Documentation: https://samuel-gfeller.ch/docs/Writing-Tests#fixtures.
  */
 class UserFixture
 {

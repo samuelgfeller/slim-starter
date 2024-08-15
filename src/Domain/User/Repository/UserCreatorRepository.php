@@ -11,7 +11,7 @@ use App\Infrastructure\Factory\QueryFactory;
  * The vertical slice architecture allows having one module folder in the Domain layer
  * and separating the layers inside the module folder to have the services, repositories,
  * and data classes together and have a better overview.
- * Documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Architecture#vertical-slice-architecture
+ * Documentation: https://samuel-gfeller.ch/docs/Architecture#vertical-slice-architecture
  */
 final readonly class UserCreatorRepository
 {

@@ -1,1 +1,1 @@
-[Unit test example](https://github.com/samuelgfeller/slim-example-project/wiki/Writing-Tests#unit-tests)
+[Unit test example](https://samuel-gfeller.ch/docs/Writing-Tests#unit-tests)

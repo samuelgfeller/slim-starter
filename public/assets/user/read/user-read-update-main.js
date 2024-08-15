@@ -5,7 +5,7 @@ import {createAlertModal} from "../../general/page-component/modal/alert-modal.j
 
 const userId = document.getElementById('user-id').value;
 
-// Documentation: https://github.com/samuelgfeller/slim-example-project/wiki/JavaScript-Frontend#contenteditable-fields
+// Documentation: https://samuel-gfeller.ch/docs/JavaScript-Frontend#contenteditable-fields
 // Null safe operator as edit icon doesn't exist if not privileged
 document.querySelector('#edit-first-name-btn')?.addEventListener('click', makeUserFieldEditable);
 document.querySelector('h1[data-name="first_name"]')?.addEventListener('dblclick', makeUserFieldEditable);

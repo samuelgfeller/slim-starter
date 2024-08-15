@@ -15,7 +15,7 @@ use Slim\Views\PhpRenderer;
 
 /**
  * Adds attributes to the PhpRenderer and updates js imports with version number.
- * Documentation: https://github.com/samuelgfeller/slim-example-project/wiki/Template-rendering.
+ * Documentation: https://samuel-gfeller.ch/docs/Template-Rendering.
  */
 final class PhpViewMiddleware implements MiddlewareInterface
 {
@@ -49,7 +49,7 @@ final class PhpViewMiddleware implements MiddlewareInterface
         ]);
 
         // Add version number to js imports in development mode
-        // https://github.com/samuelgfeller/slim-example-project/wiki/Template-rendering#js-import-cache-busting
+        // https://samuel-gfeller.ch/docs/Template-Rendering#js-import-cache-busting
         if ($this->deploymentSettings['update_js_imports_version'] === true) {
             $this->jsImportCacheBuster->addVersionToJsImports();
         }
