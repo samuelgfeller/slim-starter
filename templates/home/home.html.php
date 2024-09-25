@@ -107,7 +107,7 @@ $this->addAttribute('css', [
                     Injection</a></li>
             <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Slim-Routing">Slim-Routing</a>
             </li>
-            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Slim-Middleware">Slim Middleware</a>
+            <li><a target="_blank" href="https://samuel-gfeller.ch/docs/Slim-Middlewares">Slim Middlewares</a>
             </li>
             <li><a target="_blank"
                    href="https://samuel-gfeller.ch/docs/Single-Action-Controller">Action</a>

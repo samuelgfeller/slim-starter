@@ -34,10 +34,10 @@ features and examples such as:
 
 * Pages rendered by a [template renderer](https://samuel-gfeller.ch/docs/Template-Rendering) 
 with layout and versioned assets
-* The loading of elements from the database (users) via Ajax
+* The loading example elements from the database (users) via Ajax
 * The creation, modification, and deletion of users with validation
-* Extensive integration testing
-* An API endpoint
+* Integration testing
+* API endpoint
 * Dark / light theme switch
 
 This skeleton template is a stripped-down version of the
