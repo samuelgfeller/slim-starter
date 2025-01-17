@@ -2,7 +2,7 @@
 /**
  * @var Slim\Interfaces\RouteParserInterface $route
  * @var Slim\Views\PhpRenderer $this Rendering engine
- * @var App\Domain\User\Data\UserData $user user
+ * @var App\Module\User\Data\UserData $user user
  */
 $this->setLayout('layout/layout.html.php');
 ?>

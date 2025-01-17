@@ -1,1 +1,0 @@
-[Unit test example](https://samuel-gfeller.ch/docs/Writing-Tests#unit-tests)
