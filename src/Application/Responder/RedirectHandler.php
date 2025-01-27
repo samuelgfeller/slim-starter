@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Application\Responder;
+namespace App\Application\Responder;
 
 use Psr\Http\Message\ResponseInterface;
 use Slim\Interfaces\RouteParserInterface;

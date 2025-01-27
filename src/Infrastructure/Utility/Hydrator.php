@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Infrastructure\Utility;
+namespace App\Infrastructure\Utility;
 
 final class Hydrator
 {

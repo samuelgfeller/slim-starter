@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Core\Application\Middleware;
+namespace App\Application\Middleware;
 
-use App\Core\Application\Responder\JsonResponder;
-use App\Core\Domain\Exception\ValidationException;
+use App\Application\Responder\JsonResponder;
+use App\Module\Validation\Exception\ValidationException;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

@@ -2,7 +2,7 @@
 
 namespace App\Module\User\Read\Service;
 
-use App\Core\Domain\Exception\DomainRecordNotFoundException;
+use App\Domain\Exception\DomainRecordNotFoundException;
 use App\Module\User\Data\UserData;
 use App\Module\User\Read\Repository\UserReadFinderRepository;
 

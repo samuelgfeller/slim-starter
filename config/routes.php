@@ -6,8 +6,8 @@ use Slim\Routing\RouteCollectorProxy;
 
 return function (App $app) {
     // Home page
-    $app->get('/', \App\Module\Home\HomePageAction::class)->setName('home-page');
-    $app->get('/home', \App\Module\Home\RedirectToHomePageAction::class);
+    $app->get('/', \App\Module\Home\Action\HomePageAction::class)->setName('home-page');
+    $app->get('/home', \App\Module\Home\Action\RedirectToHomePageAction::class);
 
     // User action routes
     $app->group('/users', function (RouteCollectorProxy $group) {
@@ -40,7 +40,7 @@ return function (App $app) {
     // If an error occurs, the CORS middleware will not be executed and the exception caught and a response
     // sent without the appropriate access control header. I don't know how to execute a certain middleware
     // added to a route group only before the error middleware which is added last in the middleware.php file.
-    ->add(\App\Core\Application\Middleware\CorsMiddleware::class);
+    ->add(\App\Application\Middleware\CorsMiddleware::class);
 
     /**
      * Catch-all route to serve a 404 Not Found page if none of the routes match

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Core\Application\Middleware;
+namespace App\Application\Middleware;
 
-use App\Core\Infrastructure\Utility\Settings;
+use App\Infrastructure\Utility\Settings;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

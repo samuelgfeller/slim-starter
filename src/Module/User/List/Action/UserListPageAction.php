@@ -2,7 +2,7 @@
 
 namespace App\Module\User\List\Action;
 
-use App\Core\Application\Responder\TemplateRenderer;
+use App\Application\Responder\TemplateRenderer;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 

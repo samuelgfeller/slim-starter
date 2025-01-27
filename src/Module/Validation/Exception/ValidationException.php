@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Domain\Exception;
+namespace App\Module\Validation\Exception;
 
 use RuntimeException;
 

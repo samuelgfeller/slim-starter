@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Module\Home;
+namespace App\Module\Home\Action;
 
-use App\Core\Application\Responder\RedirectHandler;
+use App\Application\Responder\RedirectHandler;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 

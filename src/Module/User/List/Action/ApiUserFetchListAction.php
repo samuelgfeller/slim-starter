@@ -2,7 +2,7 @@
 
 namespace App\Module\User\List\Action;
 
-use App\Core\Application\Responder\JsonResponder;
+use App\Application\Responder\JsonResponder;
 use App\Module\User\List\Service\UserListFinder;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

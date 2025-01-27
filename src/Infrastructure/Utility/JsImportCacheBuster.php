@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Infrastructure\Utility;
+namespace App\Infrastructure\Utility;
 
 use FilesystemIterator;
 use RecursiveDirectoryIterator;

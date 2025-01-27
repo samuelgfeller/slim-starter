@@ -2,8 +2,8 @@
 
 namespace App\Module\User\List\Repository;
 
-use App\Core\Infrastructure\Factory\QueryFactory;
-use App\Core\Infrastructure\Utility\Hydrator;
+use App\Infrastructure\Factory\QueryFactory;
+use App\Infrastructure\Utility\Hydrator;
 use App\Module\User\Data\UserData;
 
 final readonly class UserListFinderRepository

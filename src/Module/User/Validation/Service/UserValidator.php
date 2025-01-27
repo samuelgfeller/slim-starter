@@ -2,8 +2,8 @@
 
 namespace App\Module\User\Validation\Service;
 
-use App\Core\Domain\Exception\ValidationException;
 use App\Module\User\Validation\Repository\UserValidationExistenceCheckerRepository;
+use App\Module\Validation\Exception\ValidationException;
 use Cake\Validation\Validator;
 
 final readonly class UserValidator

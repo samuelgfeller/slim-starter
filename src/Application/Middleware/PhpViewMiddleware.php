@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Core\Application\Middleware;
+namespace App\Application\Middleware;
 
-use App\Core\Infrastructure\Utility\JsImportCacheBuster;
-use App\Core\Infrastructure\Utility\Settings;
+use App\Infrastructure\Utility\JsImportCacheBuster;
+use App\Infrastructure\Utility\Settings;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;

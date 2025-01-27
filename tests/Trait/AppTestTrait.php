@@ -10,7 +10,7 @@ use UnexpectedValueException;
 
 /**
  * Initialize slim app for testing.
- * Test setup documentation: https://samuel-gfeller.ch/docs/Writing-Tests#setup
+ * Test setup documentation: http://localhost/samuel-gfeller.ch/docs/Test-Setup
  * Traits "extend" the class that include them with their content (via "use TraitName;").
  */
 trait AppTestTrait

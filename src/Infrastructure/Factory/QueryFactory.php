@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Infrastructure\Factory;
+namespace App\Infrastructure\Factory;
 
 use Cake\Database\Connection;
 use Cake\Database\Query;

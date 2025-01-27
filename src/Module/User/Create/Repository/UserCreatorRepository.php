@@ -2,7 +2,7 @@
 
 namespace App\Module\User\Create\Repository;
 
-use App\Core\Infrastructure\Factory\QueryFactory;
+use App\Infrastructure\Factory\QueryFactory;
 
 /**
  * Repository that inserts user values into the database.

@@ -2,7 +2,7 @@
 
 namespace App\Module\User\Delete\Repository;
 
-use App\Core\Infrastructure\Factory\QueryFactory;
+use App\Infrastructure\Factory\QueryFactory;
 
 final readonly class UserDeleterRepository
 {
