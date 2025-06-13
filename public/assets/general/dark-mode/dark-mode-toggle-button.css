@@ -1,30 +1,34 @@
+:root {
+    /* Change to lower number to make it appear darker e.g. 30% so it's visible on a bright background */
+    --dark-theme-icon-filter: invert(70%);
+}
+
+[data-theme="dark"] {
+    --dark-theme-icon-filter: invert(80%);
+}
+
 /*mobile first min-width sets base and content is adapted to computers.*/
 @media (min-width: 100px) {
-    /*Required to keep the toggle on top of the navbar when open on mobile*/
-    #dark-theme-toggle-container {
-        position: absolute;
-        height: var(--mobile-nav-height);
-        top: 0;
-        left: 0;
-    }
-
     #dark-theme-toggle {
-        position: absolute;
-        width: 35px;
-        height: 35px;
+        width: 25px;
+        /* For it to be perfectly in the center of the navbar I'm using height variable set in navbar css */
+        height: var(--mobile-nav-height);
         border-radius: 50%;
-        background: linear-gradient(180deg, black 50%, #d0d0d0 50%);
-        cursor: pointer;
+        /*cursor: pointer;*/
         transition: background 0.3s ease-in-out;
-        /*box-shadow: 0px 0px 10px rgba(255,255,255, 0.1);*/
-        /*box-shadow: 0px 0px 10px ;*/
-        top: 50%;
-        transform: translateY(-50%);
-        left: 10px;
+        /*Required so that icon is on the right side in home page*/
+        margin-left: auto;
+        cursor: pointer;
+        position: absolute;
+        left: 20px;
+
     }
 
-    #dark-theme-toggle.dark-theme-enabled {
-        background: linear-gradient(180deg, #d0d0d0 50%, black 50%);
+    #dark-theme-toggle img {
+        filter: var(--dark-theme-icon-filter);
+        width: 100%;
+        min-width: 25px;
+        height: 100%;
     }
 }
 
@@ -35,18 +39,8 @@
 
 /*tablet, landscape iPad, lo-res laptops ands desktops*/
 @media (min-width: 961px) {
-    #dark-theme-toggle-container {
-        height: 100%;
-        width: 65px; /*width of the toggle (45px) + right padding*/
-        right: 0;
-        left: auto;
-        top: 0;
-    }
-
     #dark-theme-toggle {
-        right: 15px;
-        width: 40px;
-        height: 40px;
+        right: 20px;
     }
 }
 

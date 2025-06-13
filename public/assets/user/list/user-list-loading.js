@@ -1,16 +1,16 @@
 import {
     displayUserCardSkeletonLoader,
     removeUserCardSkeletonLoader
-} from "./user-list-skeleton-loader.js?v=0.0.0";
-import {fetchData} from "../../general/ajax/fetch-data.js?v=0.0.0";
-import {addUsersToDom} from "./user-list-card-dom-appending.js?v=0.0.0";
+} from "./user-list-skeleton-loader.js?v=4.0.0";
+import {fetchData} from "../../general/ajax/fetch-data.js?v=4.0.0";
+import {addUsersToDom} from "./user-list-card-dom-appending.js?v=4.0.0";
 import {
     disableMouseWheelClickScrolling,
     openLinkOnHtmlElement
-} from "../../general/event-handler/open-link-on-html-element.js?v=0.0.0";
+} from "../../general/event-handler/open-link-on-html-element.js?v=4.0.0";
 import {
     triggerClickOnHtmlElementEnterKeypress
-} from "../../general/event-handler/trigger-click-on-enter-keypress.js?v=0.0.0";
+} from "../../general/event-handler/trigger-click-on-enter-keypress.js?v=4.0.0";
 
 /**
  * Load user list into DOM. Used by user-create-main and user-list-main.

@@ -1,7 +1,7 @@
-import {displayUserCreateModal} from "./user-create-modal.html.js?v=0.0.0";
-import {displayFlashMessage} from "../../general/page-component/flash-message/flash-message.js?v=0.0.0";
-import {submitModalForm} from "../../general/ajax/modal-submit-request.js?v=0.0.0";
-import {loadUserList} from "../list/user-list-loading.js?v=0.0.0";
+import {displayUserCreateModal} from "./user-create-modal.html.js?v=4.0.0";
+import {displayFlashMessage} from "../../general/page-component/flash-message/flash-message.js?v=4.0.0";
+import {submitModalForm} from "../../general/ajax/modal-submit-request.js?v=4.0.0";
+import {loadUserList} from "../list/user-list-loading.js?v=4.0.0";
 
 document.querySelector('#create-user-btn').addEventListener('click', displayUserCreateModal);
 // Modal events need event delegation as modal is removed and added dynamically

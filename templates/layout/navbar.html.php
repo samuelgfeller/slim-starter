@@ -12,8 +12,9 @@
 ?>
 
 <nav>
-    <div id="dark-theme-toggle-container">
-        <div id="dark-theme-toggle"></div>
+    <div id="dark-theme-toggle">
+        <img src="assets/general/dark-mode/moon.svg" id="moon" alt="moon" style="display: none">
+        <img src="assets/general/dark-mode/sun.svg" id="sun" alt="sun" style="display: none">
     </div>
 
     <span id="brand-name-span" class="cursor-pointer">Slim Starter</span>

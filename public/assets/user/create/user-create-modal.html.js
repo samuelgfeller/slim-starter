@@ -1,4 +1,4 @@
-import {createModal} from "../../general/page-component/modal/modal.js?v=0.0.0";
+import {createModal} from "../../general/page-component/modal/modal.js?v=4.0.0";
 
 /**
  * Create and display modal box to create a new user.
