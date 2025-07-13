@@ -1,6 +1,9 @@
 /*This file contains the colors for the light and dark theme*/
 /*Colors for light mode*/
 :root {
+    /* For scrollbar, forms and other browser ui elements */
+    color-scheme: light;
+
     /*Main colors*/
     --primary-color: #282A36;
     --accent-color: #719E40;
@@ -35,7 +38,7 @@
     /*Less bright version of the accent color*/
     --accent-darker-color-filter: brightness(0) saturate(100%) invert(54%) sepia(78%) saturate(312%) hue-rotate(46deg) brightness(70%) contrast(89%);
     /*Icon on the dark primary color background*/
-    --icon-filter-dark-background:brightness(0) saturate(100%) invert(68%) sepia(3%) saturate(260%) hue-rotate(155deg) brightness(98%) contrast(91%);
+    --icon-filter-dark-background: brightness(0) saturate(100%) invert(68%) sepia(3%) saturate(260%) hue-rotate(155deg) brightness(98%) contrast(91%);
 
     /*Buttons*/
     --btn-color: #f5f5f5;
@@ -44,6 +47,9 @@
 }
 
 [data-theme="dark"] {
+    /* For scrollbar, forms and other browser ui elements */
+    color-scheme: dark;
+
     /*Main colors*/
     --primary-color: #282A36;
     --accent-color: #719E40;
