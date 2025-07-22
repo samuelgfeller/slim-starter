@@ -91,7 +91,7 @@ $this->addAttribute('css', [
         </ul>
     </div>
     <div id="documentation-div">
-        <a target="_blank" href="https://github.com/samuelgfeller/slim-example-project/wiki"><h3>Documentation</h3>
+        <a target="_blank" href="https://samuel-gfeller.ch/docs"><h3>Documentation</h3>
             <img src="assets/home/doc-icon.svg" class="icon big-icon" id="doc-icon" alt="doc-icon">
         </a>
         <p>Relevant pages for this project:
