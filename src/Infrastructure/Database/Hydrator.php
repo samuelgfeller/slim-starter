@@ -9,7 +9,7 @@ final class Hydrator
      *
      * @template T
      *
-     * @param <array> $rows The items
+     * @param array $rows The items
      * @param class-string<T> $class The FQN
      *
      * @return T[] The list of object

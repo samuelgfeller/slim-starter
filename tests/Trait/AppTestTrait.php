@@ -4,6 +4,7 @@ namespace App\Test\Trait;
 
 use Cake\Database\Connection;
 use DI\Container;
+use Psr\Container\ContainerInterface;
 use Slim\App;
 use TestTraits\Trait\ContainerTestTrait;
 use UnexpectedValueException;
@@ -17,6 +18,7 @@ trait AppTestTrait
 {
     use ContainerTestTrait;
 
+    /** @var App<ContainerInterface> */
     protected App $app;
 
     /**
