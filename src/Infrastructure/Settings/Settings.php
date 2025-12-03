@@ -1,15 +1,11 @@
 <?php
 
-namespace App\Infrastructure\Utility;
+namespace App\Infrastructure\Settings;
 
 class Settings
 {
-    /** @var array<string, mixed> */
     private array $settings;
 
-    /**
-     * @param array<string, mixed> $settings
-     */
     public function __construct(array $settings)
     {
         $this->settings = $settings;

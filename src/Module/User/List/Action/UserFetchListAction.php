@@ -25,7 +25,7 @@ final readonly class UserFetchListAction
     public function __invoke(
         ServerRequestInterface $request,
         ResponseInterface $response,
-        array $args
+        array $args,
     ): ResponseInterface {
         // Retrieve users
         $userDataArray = $this->userFinder->findAllUsers();

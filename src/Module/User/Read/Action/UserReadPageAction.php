@@ -27,7 +27,7 @@ final readonly class UserReadPageAction
     public function __invoke(
         ServerRequestInterface $request,
         ResponseInterface $response,
-        array $args
+        array $args,
     ): ResponseInterface {
         // Get user id from request url (key defined in route definition)
         $userId = (int)$args['user_id'];

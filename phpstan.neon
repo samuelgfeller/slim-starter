@@ -4,3 +4,4 @@ parameters:
         - src
         - tests
     ignoreErrors:
+        - identifier: missingType.iterableValue

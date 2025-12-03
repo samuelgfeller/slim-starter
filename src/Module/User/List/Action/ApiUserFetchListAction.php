@@ -25,7 +25,7 @@ final readonly class ApiUserFetchListAction
     public function __invoke(
         ServerRequestInterface $request,
         ResponseInterface $response,
-        array $args
+        array $args,
     ): ResponseInterface {
         $users = $this->userFinder->findAllUsers();
 

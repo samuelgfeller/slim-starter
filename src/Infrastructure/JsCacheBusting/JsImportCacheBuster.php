@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Infrastructure\Utility;
+namespace App\Infrastructure\JsCacheBusting;
 
+use App\Infrastructure\Settings\Settings;
 use FilesystemIterator;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -26,7 +27,7 @@ final class JsImportCacheBuster
      * are modified so that the imports have the version number at the
      * end of the file name as query parameters to break cache on
      * version change.
-     * This function is called in PhpRendererMiddleware only on dev env.
+     * This function is called in PhpViewMiddleware only on dev env.
      * Performance wise, this function takes between 10 and 20ms when content
      * is unchanged and between 30 and 50ms when content is replaced.
      *
@@ -51,7 +52,7 @@ final class JsImportCacheBuster
                     preg_match_all('/import (.|\n|\r|\t)*? from ("|\')(.*?)\.js(\?v=.*?)?("|\');/', $content, $matches);
                     // $matches is an array that contains all matches. In this case, the content is the following:
                     // Key [0] is the entire matching string including the search
-                    // Key [1] first variable unknown string after the 'import ' word (e.g. '{requestDropdownOptions}', '{createModal}')
+                    // Key [1] first variable unknown string after the 'import ' word (e.g. '{requestFormOptions}', '{createModal}')
                     // Key [2] single or double quotes of path opening after "from"
                     // Key [3] variable unknown string after the opening single or double quotes after from (only path) e.g.
                     // '../general/js/requestUtil/fail-handler'
@@ -59,7 +60,7 @@ final class JsImportCacheBuster
                     // Loop over import paths
                     foreach ($matches[3] as $key => $importPath) {
                         $oldFullImport = $matches[0][$key];
-                        // Remove query params if the version is null
+                        // Remove query params if version is null
                         if ($this->version === null) {
                             $newImportPath = $importPath . '.js';
                         } else {

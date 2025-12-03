@@ -2,7 +2,7 @@
 
 namespace App\Module\User\Read\Repository;
 
-use App\Infrastructure\Factory\QueryFactory;
+use App\Infrastructure\Database\QueryFactory;
 
 final readonly class UserReadFinderRepository
 {

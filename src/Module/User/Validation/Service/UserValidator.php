@@ -9,7 +9,7 @@ use Cake\Validation\Validator;
 final readonly class UserValidator
 {
     public function __construct(
-        private UserValidationExistenceCheckerRepository $userValidationExistenceCheckerRepository
+        private UserValidationExistenceCheckerRepository $userValidationExistenceCheckerRepository,
     ) {
     }
 

@@ -2,12 +2,12 @@
 
 namespace App\Module\User\Delete\Repository;
 
-use App\Infrastructure\Factory\QueryFactory;
+use App\Infrastructure\Database\QueryFactory;
 
 final readonly class UserDeleterRepository
 {
     public function __construct(
-        private QueryFactory $queryFactory
+        private QueryFactory $queryFactory,
     ) {
     }
 

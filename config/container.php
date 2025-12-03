@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Dependency Injection container configuration.
  *
@@ -6,7 +7,7 @@
  */
 
 use App\Application\Middleware\PhpViewMiddleware;
-use App\Infrastructure\Utility\Settings;
+use App\Infrastructure\Settings\Settings;
 use Cake\Database\Connection;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\RotatingFileHandler;

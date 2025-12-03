@@ -2,8 +2,8 @@
 
 namespace App\Application\Middleware;
 
-use App\Infrastructure\Utility\JsImportCacheBuster;
-use App\Infrastructure\Utility\Settings;
+use App\Infrastructure\JsCacheBusting\JsImportCacheBuster;
+use App\Infrastructure\Settings\Settings;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
@@ -29,7 +29,7 @@ final class PhpViewMiddleware implements MiddlewareInterface
         private readonly PhpRenderer $phpRenderer,
         private readonly JsImportCacheBuster $jsImportCacheBuster,
         Settings $settings,
-        private readonly RouteParserInterface $routeParser
+        private readonly RouteParserInterface $routeParser,
     ) {
         $this->publicSettings = $settings->get('public');
         $this->deploymentSettings = $settings->get('deployment');

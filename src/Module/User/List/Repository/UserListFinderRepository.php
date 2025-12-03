@@ -2,15 +2,15 @@
 
 namespace App\Module\User\List\Repository;
 
-use App\Infrastructure\Factory\QueryFactory;
-use App\Infrastructure\Utility\Hydrator;
+use App\Infrastructure\Database\Hydrator;
+use App\Infrastructure\Database\QueryFactory;
 use App\Module\User\Data\UserData;
 
 final readonly class UserListFinderRepository
 {
     public function __construct(
         private QueryFactory $queryFactory,
-        private Hydrator $hydrator
+        private Hydrator $hydrator,
     ) {
     }
 

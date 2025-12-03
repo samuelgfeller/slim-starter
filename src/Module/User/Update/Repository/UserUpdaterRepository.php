@@ -2,12 +2,12 @@
 
 namespace App\Module\User\Update\Repository;
 
-use App\Infrastructure\Factory\QueryFactory;
+use App\Infrastructure\Database\QueryFactory;
 
 final readonly class UserUpdaterRepository
 {
     public function __construct(
-        private QueryFactory $queryFactory
+        private QueryFactory $queryFactory,
     ) {
     }
 

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Creates versioned CSS and Javascript resources html "link" and "script" tags.
  * This template is fetched by the layout template.

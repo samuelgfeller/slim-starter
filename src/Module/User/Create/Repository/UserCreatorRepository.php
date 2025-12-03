@@ -2,7 +2,7 @@
 
 namespace App\Module\User\Create\Repository;
 
-use App\Infrastructure\Factory\QueryFactory;
+use App\Infrastructure\Database\QueryFactory;
 
 /**
  * Repository that inserts user values into the database.
@@ -16,7 +16,7 @@ use App\Infrastructure\Factory\QueryFactory;
 final readonly class UserCreatorRepository
 {
     public function __construct(
-        private QueryFactory $queryFactory
+        private QueryFactory $queryFactory,
     ) {
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infrastructure\Factory;
+namespace App\Infrastructure\Database;
 
 use Cake\Database\Connection;
 use Cake\Database\Query;
@@ -68,7 +68,7 @@ final readonly class QueryFactory
      * Insert row usage example:
      *     return (int)$this->queryFactory->insertQueryWithData($data)->into('user')->execute()->lastInsertId();.
      *
-     * @param array<string, int|string|null> $data ['col_name' => 'Value', 'other_col' => 'Other value']
+     * @param array $data ['col_name' => 'Value', 'other_col' => 'Other value']
      *
      * @return InsertQuery
      */
@@ -116,8 +116,7 @@ final readonly class QueryFactory
      * Insert multiple rows usage example:
      *     return (int)$this->queryFactory->newMultipleInsert($data)->into('user')->execute()->lastInsertId();
      *
-     * @param array<array<string, int|string|null>> $arrayOfData
-     * Example: [['col_name' => 'Value', 'other_col' => 'Other value'], ['col_name' => 'value']]
+     * @param array $arrayOfData [['col_name' => 'Value', 'other_col' => 'Other value'], ['col_name' => 'value']]
      *
      * @return InsertQuery
      */

@@ -27,7 +27,7 @@ final readonly class UserDeleteAction
     public function __invoke(
         ServerRequestInterface $request,
         ResponseInterface $response,
-        array $args
+        array $args,
     ): ResponseInterface {
         $userIdToDelete = (int)$args['user_id'];
         // Call service function to delete user

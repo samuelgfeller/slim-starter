@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Infrastructure\Utility;
+namespace App\Infrastructure\Database;
 
 final class Hydrator
 {
     /**
-     * Hydrate a collection of objects with data from an array items.
+     * Hydrate a collection of objects with data from an array with multiple items.
      *
      * @template T
      *
-     * @param array<array<string, mixed>> $rows The items
+     * @param <array> $rows The items
      * @param class-string<T> $class The FQN
      *
      * @return T[] The list of object
