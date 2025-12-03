@@ -5,7 +5,7 @@ filter:
     "tests/",
     "resources/",
     "public/",
-    "src/Infrastructure/Utility/JsImportCacheBuster.php"
+    "src/Infrastructure/JsImportCacheBuster.php"
   ]
 
 checks:
