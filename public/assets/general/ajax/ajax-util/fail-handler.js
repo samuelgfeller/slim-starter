@@ -1,5 +1,21 @@
-import {displayValidationErrorMessage} from "../../validation/form-validation.js?v=4.0.0";
-import {displayFlashMessage} from "../../page-component/flash-message/flash-message.js?v=4.0.0";
+// List of words that are used in modal box and need to be translated
+import {fetchTranslations} from "../fetch-translation-data.js?v=0.0.0";
+import {displayFlashMessage} from "../../page-component/flash-message/flash-message.js?v=0.0.0";
+import {__} from "../../general-js/functions.js?v=0.0.0";
+import {displayValidationErrorMessage} from "../../validation/form-validation.js?v=0.0.0";
+
+let wordsToTranslate = [
+    __('Access denied, please log in and try again'),
+    __('Forbidden. Not allowed to access this area or function'),
+    __('Please try again and report the error to an administrator'),
+];
+// Init translated var by populating it with English values as a default so that all keys are surely existing
+let translated = Object.fromEntries(wordsToTranslate.map(value => [value, value]));
+// Fetch translations and replace translated var
+fetchTranslations(wordsToTranslate).then(response => {
+    // Fill the var with a JSON of the translated words. Key is the original English words and value the translated one
+    translated = response;
+});
 
 /**
  * This function can be called with the Response or a TypeError.
@@ -34,12 +50,12 @@ export async function handleFail(response, domFieldId = null) {
         }
 
         // If response data doesn't contain login url
-        errorMsg += `<br>Access denied, please refresh the page and try again.`;
+        errorMsg += `<br>${translated['Access denied, please refresh the page and try again']}.`;
     }
 
     const statusMessageMap = {
-        403: 'Forbidden. Not allowed to access this area or function',
-        500: 'Please try again and report the error to an administrator'
+        403: translated['Forbidden. Not allowed to access this area or function'],
+        500: translated['Please try again and report the error to an administrator']
     };
 
     // Check if response status is in the map
@@ -56,6 +72,9 @@ export async function handleFail(response, domFieldId = null) {
     // If the server provides error detail message, add it to the error message
     if (responseData.hasOwnProperty('error')) {
         errorMsg += '<br><br><b>Error:</b> ' + responseData.error;
+        if (responseData.hasOwnProperty('file') && responseData.hasOwnProperty('line')) {
+            errorMsg += '<br><b>File:</b> ' + responseData.file + ' <br><b>Line:</b> ' + responseData.line;
+        }
     }
 
     // Output error to user

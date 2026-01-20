@@ -1,13 +1,13 @@
-import {getFormData, toggleEnableDisableForm} from "../page-component/modal/modal-form.js?v=4.0.0";
-import {basePath} from "../general-js/config.js?v=4.0.0";
-import {handleFail} from "./ajax-util/fail-handler.js?v=4.0.0";
-import {closeModal} from "../page-component/modal/modal.js?v=4.0.0";
+import {handleFail} from "./ajax-util/fail-handler.js?v=0.0.0";
+import {getFormData, toggleEnableDisableForm} from "../page-component/modal/modal-form.js?v=0.0.0";
+import {basePath} from "../general-js/config.js?v=0.0.0";
+import {closeModal} from "../page-component/modal/modal.js?v=0.0.0";
 
 /**
  * Retrieves form data, checks form validity, disables form, submits modal form and closes it on success.
  *
  * @param {string} modalFormId
- * @param {string} moduleRoute POST module route like "users"
+ * @param {string} moduleRoute POST module route like "users" or "clients"
  * @param {string} httpMethod POST or PUT
  * @return {void|Promise} with as content server response as JSON
  */
@@ -24,15 +24,18 @@ export function submitModalForm(
     }
 
     // Serialize form data before disabling form elements
-    let formData = getFormData(modalForm);
+    // let formData = getFormData(modalForm);
+    const formData = new FormData(modalForm);
 
     // Disable form to indicate that the request is made AFTER getting form data as FormData doesn't consider disabled fields
     toggleEnableDisableForm(modalFormId);
 
     return fetch(basePath + moduleRoute, {
         method: httpMethod,
-        headers: {"Content-type": "application/json", "Accept": "application/json"},
-        body: JSON.stringify(formData)
+        // Content-Type NOT set here – the browser will set multipart/form-data with boundary
+        // A special body parser is required in the backend to handle PUT requests containing
+        // a body with content type multipart/form-data
+        body: formData,
     })
         .then(async response => {
             if (!response.ok) {

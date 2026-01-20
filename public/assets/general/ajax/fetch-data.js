@@ -1,5 +1,5 @@
-import {basePath} from "../general-js/config.js?v=4.0.0";
-import {handleFail} from "./ajax-util/fail-handler.js?v=4.0.0";
+import {handleFail} from "./ajax-util/fail-handler.js?v=0.0.0";
+import {basePath} from "../general-js/config.js?v=0.0.0";
 
 /**
  * Sends a GET request and returns result in promise.
@@ -10,12 +10,13 @@ import {handleFail} from "./ajax-util/fail-handler.js?v=4.0.0";
 export function fetchData(route) {
     return fetch(basePath + route, {
         method: 'GET', headers: {"Content-type": "application/json", "Accept": "application/json"}
-    }).then(async response => {
-        if (!response.ok) {
-            await handleFail(response);
-            throw response;
-        }
-        return response.json();
-    });
+    })
+        .then(async response => {
+            if (!response.ok) {
+                await handleFail(response);
+                throw response;
+            }
+            return response.json();
+        });
     // Without catch block to let the calling function implement it
 }

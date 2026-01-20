@@ -8,7 +8,7 @@ let flashMessageIdCounter = 0;
 
 /**
  * Create and display flash message from the client side
- * Display server side flash: flash-messages.html.php
+ * Display server side flash: flash-messages.html.php.
  *
  * @param {string} typeName (success | error | warning | info)
  * @param {string} message flash message content
@@ -45,7 +45,7 @@ export function displayFlashMessage(typeName, message) {
                 <figure class="flash-fig" >
                     <img class="open" draggable="false" src="${getFlashIconPath()}" alt="${typeName}">
                 </figure>
-                <div class="flash-message"><h3>Flash message</h3><p>${message /*this line has to be on one line*/}</p></div>
+                <div class="flash-message"><h3>Flash message</h3><p>${message/*this line has to be on one line*/}</p></div>
                 <span class="flash-close-btn">&times;</span>                
             </dialog>`);
 
@@ -143,8 +143,17 @@ function slideInFlashMessage(flash) {
  * "this" has to be a child of .flash or the object itself
  */
 export function slideFlashOut() {
+
     // "this" is a flash child (close button / figure or element itself)
     const flash = this.closest('.flash');
+    // Block slide out if hovering over flash message but not over close button
+    if (flash.matches(':hover') && !flash.querySelector('.flash-close-btn').matches(':hover')) {
+        // Schedule slide out after 2s
+        setTimeout(() => {
+            slideFlashOut.call(flash);
+        }, 2000);
+        return;
+    }
     flash.className = flash.className.replace('flash-slide-in', "flash-slide-out");
     // Remove flash from dom as it's not needed anymore after slide out animation is done
     setTimeout(() => {

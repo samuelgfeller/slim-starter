@@ -10,7 +10,7 @@ class ValidationException extends RuntimeException
     public readonly array $validationErrors;
 
     /**
-     * @param array<string, array<string, string>> $validationErrors
+     * @param array<string, array<string, array|string>> $validationErrors
      * @param string $message
      */
     public function __construct(array $validationErrors, string $message = 'Validation error')
@@ -55,7 +55,7 @@ class ValidationException extends RuntimeException
      *    ],
      * ]
      *
-     * @param array<string, array<string, string>> $validationErrors The cakephp validation errors
+     * @param array<string, array<string, array|string>> $validationErrors The cakephp validation errors
      *
      * @return array<string, array<int, string>> the transformed result in the format documented above
      */

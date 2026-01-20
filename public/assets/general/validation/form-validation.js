@@ -1,3 +1,5 @@
+import {displayFlashMessage} from "../page-component/flash-message/flash-message.js?v=1765231350";
+
 /**
  * Display form error message
  *
@@ -8,7 +10,7 @@
 export function displayValidationErrorMessage(fieldName, errorMessage, domFieldId = null) {
     let field;
     // console.log('displayValidationErrorMessage', fieldName, errorMessage, domFieldId);
-    if (domFieldId !== null) {
+    if (domFieldId) {
         field = document.querySelector('#' + domFieldId);
     } else {
         field = document.querySelector(`[name="${fieldName}"]`);
@@ -17,8 +19,10 @@ export function displayValidationErrorMessage(fieldName, errorMessage, domFieldI
         // Contenteditable field accessed with data-name
         field = document.querySelector(`[data-name="${fieldName}"]`);
     }
-    // console.log(domFieldId, field);
-    if (field !== null) {
+    // If the field is still null, display the flash message
+    if (field === null) {
+        displayFlashMessage('error', `<b>${fieldName}</b>: ${errorMessage}`)
+    } else { // If the field is not null, display error message below field
         // If the field is a checkbox, the error message placement is a bit different
         if (field.hasAttribute('type') && ['checkbox', 'radio'].includes(field.type)) {
             let radioInputs = document.querySelectorAll(`[name="${fieldName}"]`);
@@ -31,8 +35,8 @@ export function displayValidationErrorMessage(fieldName, errorMessage, domFieldI
         // Remove any existing message in case there was one
         // (this is an additional for when this function is called not from the handleFail() that removes previous error msg)
         // If there are multiple error messages for a single field, the previous one is simply replaced by the newer one
-        // which isn't ideal but acceptable in this scope, especially since its so rare and worst case would be that user
-        // has to submit form one more time to get the updated (other) error message for the same field (that he couldn't see before)
+        // which isn't ideal but acceptable in this scope especially since its so rare and worst case would be that user
+        // has to submit form one more time to get the updated (other) error message (that he couldn't see before)
         field.parentNode.querySelector('strong.err-msg')?.remove();
         field.insertAdjacentHTML('afterend', `<strong class="err-msg">${errorMessage}</strong>`);
         let label = field.parentNode.querySelector('label');

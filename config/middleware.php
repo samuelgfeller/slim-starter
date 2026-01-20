@@ -10,7 +10,8 @@ use SlimErrorRenderer\Middleware\NonFatalErrorHandlingMiddleware;
 // Slim middlewares are LIFO (last in, first out) so when responding, the order is backwards
 // https://samuel-gfeller.ch/docs/Slim-Middlewares#order-of-execution
 return function (App $app) {
-    $app->addBodyParsingMiddleware();
+    // Add body parsing middleware with custom rule to parse PUT request with a content type multipart/form-data
+    $app->addBodyParsingMiddleware(require __DIR__ . '/../config/body-parser.php');
 
     // Add new middlewares here
 

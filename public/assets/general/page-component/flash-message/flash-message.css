@@ -1,10 +1,11 @@
-:root{
+:root {
     --flash-success-background-color: #bee8c2;
     --flash-error-background-color: #fabfb5;
     --flash-info-background-color: #bde4ee;
     --flash-warning-background-color: #f8d9af;
     --flash-message-brightness: 100%;
 }
+
 [data-theme="dark"] {
     --flash-success-background-color: #619366;
     --flash-error-background-color: #a4685e;
@@ -12,6 +13,7 @@
     --flash-warning-background-color: #a48252;
     --flash-message-brightness: 70%;
 }
+
 /*mobile first min-width sets base and content is adapted to computers.*/
 @media (min-width: 100px) {
     #flash-container {
@@ -25,16 +27,16 @@
 
     /*Flash dialog (flash message container)*/
     .flash {
-        display: none; /*Flash should only be displayed if it has class .flash-slide-in*/
         max-width: 90%;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        box-shadow: var(--default-box-shadow);
         border-radius: 20px;
         top: 30px;
-        margin-top: 15px;
+        margin: 15px auto;
         opacity: 1;
         overflow: hidden; /*Prevent color from overflowing rounded border*/
         white-space: nowrap;
         align-items: start;
+        display: none; /*Flash should only be displayed if it has class .flash-slide-in*/
         /*Revert default styling of <dialog>*/
         position: relative;
         border: none;
@@ -78,6 +80,7 @@
         /*Start to wrap right before ending*/
         100% {
             white-space: break-spaces;
+            overflow-wrap: anywhere;
             /*Takes initial max-width value which is 90%*/
         }
     }
@@ -176,10 +179,13 @@
         /*Right margin replaced by padding on the entire flash to have a space during opening animation*/
         margin: 9px 0 9px 4px;
         font-size: 0.9rem;
-        /*width: 200px;*/
-        /*display: block;*/
     }
-    .flash-message a{
+
+    .flash-message p, .flash-message p * {
+        color: black;
+    }
+
+    .flash-message a {
         color: black;
         font-weight: bold;
     }
@@ -294,6 +300,7 @@
         margin: 15px 0 10px 0px;
         transform: translateX(130%);
         white-space: break-spaces;
+        overflow-wrap: anywhere;
         /*Allow pointer events on the flash message after removing it on the container*/
         pointer-events: auto;
     }
