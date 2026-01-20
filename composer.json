@@ -4,7 +4,7 @@
   "type": "project",
   "license": "MIT",
   "require": {
-    "slim/slim": "^4",
+    "slim/slim": "^4.15",
     "monolog/monolog": "^3",
     "php-di/php-di": "^7.0",
     "cakephp/database": "^5",

@@ -1,4 +1,4 @@
-import {getUserCardHtml} from "./user-list-card.html.js?v=4.0.0";
+import {getUserCardHtml} from "./user-list-card.html.js?v=4.0.1";
 
 /**
  * Add elements to page

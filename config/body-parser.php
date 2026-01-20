@@ -1,4 +1,5 @@
 <?php
+
 // PHP can't parse the request body from a PUT request with a content type multipart/form-data.
 // Source: https://stackoverflow.com/a/9469615
 return [
@@ -30,7 +31,7 @@ return [
             $part = ltrim($part, "\r\n");
 
             // Last part ends with "--\r\n" or just "--"
-            if ($part === "--\r\n" || $part === "--") {
+            if ($part === "--\r\n" || $part === '--') {
                 break;
             }
 
@@ -81,5 +82,5 @@ return [
         }
 
         return !empty($data) ? $data : null;
-    }
+    },
 ];

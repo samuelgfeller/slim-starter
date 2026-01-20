@@ -1,5 +1,5 @@
-import {handleFail} from "./ajax-util/fail-handler.js?v=0.0.0";
-import {basePath} from "../general-js/config.js?v=0.0.0";
+import {handleFail} from "./ajax-util/fail-handler.js?v=4.0.1";
+import {basePath} from "../general-js/config.js?v=4.0.1";
 
 /**
  * Sends a GET request and returns result in promise.
